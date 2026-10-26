@@ -168,3 +168,59 @@
         line-height: 1.3 !important;
     }
 }
+
+/* ============================================
+   POS MODERNO - BOTONES TÁCTILES EN MÓVIL
+============================================ */
+
+@media (max-width: 767px) {
+
+    /* Contenedor principal */
+    .pos-modern-screen .pos-form-actions {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Contenedor de botones */
+    .pos-modern-screen .pos-form-actions .col-md-12 {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Cada botón ocupa una celda */
+    .pos-modern-screen .pos-form-actions .col-md-12 > .btn,
+    .pos-modern-screen .pos-form-actions .col-md-12 > button {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 56px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 10px 6px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        border-radius: 9px !important;
+    }
+
+    /* Transacciones recientes ocupa la fila completa */
+    .pos-modern-screen
+    .pos-form-actions
+    .col-md-12 > .pos-recent-transactions {
+        grid-column: 1 / -1 !important;
+    }
+}

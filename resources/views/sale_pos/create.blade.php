@@ -101,7 +101,7 @@
     <link rel="stylesheet" href="{{ asset('css/pos-modern-phase3-payments.css?v=1') }}">
 
     {{-- FASE 4: ACCIONES --}}
-    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase4-actions.css?v=2') }}">
+    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase4-actions.css?v=3') }}">
 
     {{-- FASE 5: DISTRIBUCIÓN --}}
     <link rel="stylesheet" href="{{ asset('css/pos-modern-phase5-layout.css?v=3') }}">
