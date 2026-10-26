@@ -397,11 +397,5 @@
 		<i class="fa fa-times text-danger pos_remove_row cursor-pointer" aria-hidden="true"></i>
 	</td>
 </tr> 
-<script>
-	$(document).ready(function() {
-  $(".select2").select2({
-    'allowClear': true
-  });
-});
-</script>
+
 
