@@ -104,7 +104,7 @@
     <link rel="stylesheet" href="{{ asset('css/pos-modern-phase4-actions.css?v=1') }}">
 
     {{-- FASE 5: DISTRIBUCIÓN --}}
-    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase5-layout.css?v=1') }}">
+    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase5-layout.css?v=2') }}">
 
     {{-- FASE 6: CARRITO --}}
     <link rel="stylesheet" href="{{ asset('css/pos-modern-phase6-cart.css?v=1') }}">

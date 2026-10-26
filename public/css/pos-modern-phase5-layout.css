@@ -361,3 +361,71 @@
         min-height: 88px;
     }
 }
+
+
+/* ============================================
+   POS MODERNO - MÓVIL SOLO BUSCADOR
+============================================ */
+
+@media (max-width: 767px) {
+
+    /* Ocultar listado visual de productos */
+    .pos-modern-screen
+    .pos-modern-catalog-column
+    #product_list_body {
+        display: none !important;
+    }
+
+    /* Ocultar filtros de categoría y marca */
+    .pos-modern-screen
+    .pos-modern-catalog-column
+    #product_category,
+    .pos-modern-screen
+    .pos-modern-catalog-column
+    #product_brand {
+        display: none !important;
+    }
+
+    /* Reducir tamaño del catálogo */
+    .pos-modern-screen .pos-modern-catalog-panel {
+        padding: 10px !important;
+        margin: 0 0 10px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Encabezado compacto */
+    .pos-modern-screen
+    .pos-modern-catalog-panel
+    .pos-modern-panel-heading {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Buscador */
+    .pos-modern-screen #search_product {
+        display: block !important;
+        width: 100% !important;
+        height: 44px !important;
+        font-size: 14px !important;
+        border-radius: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Evitar que el contenedor recorte los resultados */
+    .pos-modern-screen
+    .pos-modern-catalog-column {
+        overflow: visible !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Lista desplegable de autocompletado */
+    .ui-autocomplete {
+        max-height: 280px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 11000 !important;
+        -webkit-overflow-scrolling: touch;
+    }
+}
