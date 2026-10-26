@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                @if(empty($pos_settings['hide_product_suggestion']) && !isMobile())
+                @if(empty($pos_settings['hide_product_suggestion']))
                     <div class="col-md-5 pos-modern-catalog-column">
                         <div class="pos-modern-catalog-panel">
                             <div class="pos-modern-panel-heading"><i class="fas fa-th-large"></i> Catálogo de productos</div>
@@ -113,7 +113,7 @@
     <link rel="stylesheet" href="{{ asset('css/pos-modern-phase7-totals.css?v=1') }}">
 
     {{-- FASE 8: AJUSTES FINALES DEL CARRITO --}}
-    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase8-cart.css?v=11') }}">
+    <link rel="stylesheet" href="{{ asset('css/pos-modern-phase8-cart.css?v=12') }}">
 
 @stop
 
