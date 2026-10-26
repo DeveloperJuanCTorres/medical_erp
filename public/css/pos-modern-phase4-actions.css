@@ -121,3 +121,50 @@
     .pos-modern-actions-wrap .pos-form-actions .btn { transition: none; }
     .pos-modern-actions-wrap .pos-form-actions .btn:not(:disabled):hover { transform: none; }
 }
+
+/* ==========================================
+   POS MODERNO - ACCIONES EN 2 COLUMNAS MÓVIL
+========================================== */
+
+@media (max-width: 767px) {
+
+    /* Contenedor general */
+    .pos-modern-screen .pos-form-actions {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Fila de acciones */
+    .pos-modern-screen .pos-form-actions > .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin: 0 !important;
+    }
+
+    /* Cada columna ocupa la mitad */
+    .pos-modern-screen .pos-form-actions > .row > [class*="col-"] {
+        flex: 0 0 calc(50% - 4px) !important;
+        width: calc(50% - 4px) !important;
+        max-width: calc(50% - 4px) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    /* Botones */
+    .pos-modern-screen .pos-form-actions button,
+    .pos-modern-screen .pos-form-actions .btn {
+        width: 100% !important;
+        min-height: 38px !important;
+        margin: 0 !important;
+        padding: 8px 5px !important;
+        font-size: 11px !important;
+        border-radius: 7px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+}
