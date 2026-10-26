@@ -143,3 +143,24 @@
 }
 
 
+@media (max-width: 767px) {
+
+    .pos-modern-screen .pos-modern-actions-wrap {
+        position: relative !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .pos-modern-screen .pos-form-actions {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+    }
+
+}
