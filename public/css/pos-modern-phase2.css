@@ -1,0 +1,198 @@
+/* POS Modern Pro — Fase 2: catálogo y detalle de venta.
+   Agregar DESPUÉS de pos-modern-pro.css. Solo presentación. */
+
+/* Catálogo: espacio, legibilidad y estados de interacción */
+.pos-modern-screen .pos-modern-catalog-panel { min-height:0!important; height:auto!important; }
+.pos-modern-screen #product_list_body { padding-top:12px!important; }
+.pos-modern-screen #product_list_body .product_box,
+.pos-modern-screen #product_list_body .product-card { border:1px solid #dfe7f2!important; border-radius:14px!important; background:#fff!important; box-shadow:0 2px 7px rgba(30,56,90,.035)!important; transition:box-shadow .18s ease, border-color .18s ease, transform .18s ease; }
+.pos-modern-screen #product_list_body .product_box:hover,
+.pos-modern-screen #product_list_body .product-card:hover { border-color:#93b6f4!important; box-shadow:0 9px 22px rgba(31,70,128,.12)!important; transform:translateY(-2px); }
+.pos-modern-screen #product_list_body .product_box:active,
+.pos-modern-screen #product_list_body .product-card:active { transform:translateY(0); }
+.pos-modern-screen #product_list_body img { object-fit:contain; border-radius:8px; }
+.pos-modern-screen #product_category_div .select2-container,
+.pos-modern-screen #product_brand_div .select2-container { width:100%!important; }
+.pos-modern-screen .pos-modern-catalog-panel .select2-selection { min-height:42px!important; }
+
+/* Carrito: tabla compacta y filas claramente delimitadas */
+.pos-modern-screen .pos_product_div { height:auto!important; min-height:0!important; max-height:380px; overflow-y:auto; overflow-x:auto; margin-bottom:12px!important; }
+.pos-modern-screen #pos_table { border-radius:12px!important; border:1px solid #e0e8f3!important; margin-bottom:0!important; }
+.pos-modern-screen #pos_table thead th { position:sticky; top:0; z-index:2; background:#f0f5fc!important; color:#30486c!important; font-size:12px!important; padding:14px 10px!important; }
+.pos-modern-screen #pos_table tbody td { background:#fff; padding:14px 10px!important; border-bottom:1px solid #eaf0f7!important; }
+.pos-modern-screen #pos_table tbody tr:hover td { background:#f8fbff!important; }
+.pos-modern-screen #pos_table tbody .form-control { min-height:35px; border-radius:8px!important; }
+.pos-modern-screen #pos_table tbody .input-group-btn .btn,
+.pos-modern-screen #pos_table tbody button { border-radius:7px!important; }
+.pos-modern-screen #pos_table tbody a { font-weight:600; }
+
+/* Resumen siempre inmediatamente debajo de la tabla */
+.pos-modern-screen .pos_form_totals { margin:12px 0 0!important; padding:12px 14px!important; background:#f4f8ff!important; border:1px solid #e0e9f8!important; border-radius:13px!important; }
+.pos-modern-screen .pos_form_totals .table { margin:0!important; }
+.pos-modern-screen .pos_form_totals td { padding:10px 12px!important; line-height:1.5; }
+.pos-modern-screen .pos_form_totals b { color:#183458!important; }
+.pos-modern-screen .pos_form_totals .fa-edit,
+.pos-modern-screen .pos_form_totals .fas.fa-edit { color:#326ad3; }
+
+/* Eliminar alturas rígidas heredadas en las columnas */
+@media(min-width:992px) {
+  .pos-modern-screen .pos-modern-columns { min-height:0!important; align-items:flex-start!important; }
+  .pos-modern-screen .pos-modern-main-column,
+  .pos-modern-screen .pos-modern-sale-panel,
+  .pos-modern-screen .pos-modern-sale-panel > .box-body { min-height:0!important; height:auto!important; }
+}
+@media(max-width:767px) {
+  .pos-modern-screen .pos_product_div { max-height:320px; }
+  .pos-modern-screen #pos_table { min-width:620px; }
+  .pos-modern-screen .pos_form_totals { padding:9px!important; }
+}
+
+
+/* ==========================================
+   POS MODERN PRO - FIX LAPTOP
+   EVITAR DOBLE SCROLL EN DETALLE DE VENTA
+========================================== */
+
+@media (min-width: 992px) {
+
+    /* Los contenedores exteriores no deben
+       generar barras de desplazamiento */
+    .pos-modern-screen .pos-modern-main-column,
+    .pos-modern-screen .pos-modern-sale-panel,
+    .pos-modern-screen .pos-modern-sale-panel > .box-body,
+    .pos-modern-screen .pos-modern-cart-area {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* Un único scroll para las filas de productos */
+    .pos-modern-screen .pos_product_div {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: 340px !important;
+        overflow-y: auto !important;
+        overflow-x: auto !important;
+        overscroll-behavior: contain;
+    }
+
+    /* Tabla de productos */
+    .pos-modern-screen #pos_table {
+        width: 100%;
+        margin-bottom: 0 !important;
+    }
+
+    /* Mantener encabezados visibles */
+    .pos-modern-screen #pos_table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #eef3fb !important;
+    }
+
+    /* Resumen fuera del scroll */
+    .pos-modern-screen .pos_form_totals {
+        position: relative !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin-top: 12px !important;
+        overflow: visible !important;
+    }
+}
+
+/* Laptop con menor altura de pantalla */
+@media (min-width: 992px) and (max-height: 800px) {
+
+    .pos-modern-screen .pos_product_div {
+        max-height: 280px !important;
+    }
+
+    .pos-modern-screen #pos_table td {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+
+/* ==========================================
+   POS MODERN PRO - CARRITO RESPONSIVE
+   Resumen siempre visible
+========================================== */
+
+@media (min-width: 992px) {
+
+    /* Paneles exteriores sin scroll interno */
+    .pos-modern-screen .pos-modern-main-column,
+    .pos-modern-screen .pos-modern-sale-panel,
+    .pos-modern-screen .pos-modern-sale-panel > .box-body,
+    .pos-modern-screen .pos-modern-cart-area {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* Reservar espacio para:
+       cabecera, buscador, resumen y botones */
+    .pos-modern-screen .pos_product_div {
+        height: auto !important;
+        min-height: 0 !important;
+
+        max-height: clamp(
+            180px,
+            calc(100vh - 490px),
+            650px
+        ) !important;
+
+        overflow-y: auto !important;
+        overflow-x: auto !important;
+
+        overscroll-behavior: contain;
+        margin-bottom: 12px !important;
+    }
+
+    /* Tabla */
+    .pos-modern-screen #pos_table {
+        margin-bottom: 0 !important;
+    }
+
+    /* Encabezado fijo durante el scroll */
+    .pos-modern-screen #pos_table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #eef3fb !important;
+    }
+
+    /* Resumen fuera del scroll */
+    .pos-modern-screen .pos_form_totals {
+        position: relative !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin-top: 12px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Laptop: reservar más espacio vertical */
+@media (min-width: 992px) and (max-height: 800px) {
+
+    .pos-modern-screen .pos_product_div {
+        max-height: clamp(
+            160px,
+            calc(100vh - 510px),
+            340px
+        ) !important;
+    }
+}
+
+/* Monitor grande: mostrar más productos */
+@media (min-width: 992px) and (min-height: 1000px) {
+
+    .pos-modern-screen .pos_product_div {
+        max-height: calc(100vh - 490px) !important;
+    }
+}

@@ -1,0 +1,212 @@
+
+/* ==========================================
+   POS MODERN PRO - FASE 7
+   RESUMEN COMPACTO Y AJUSTES DESPLEGABLES
+========================================== */
+
+.pos-modern-screen .pos_form_totals.pos-modern-totals-compact {
+    margin: 12px 0 0 !important;
+    padding: 10px !important;
+    background: #f4f8ff !important;
+    border: 1px solid #dfe8f7 !important;
+    border-radius: 13px !important;
+    overflow: visible !important;
+}
+
+.pos-modern-screen .pos-modern-totals-compact > .col-md-12 {
+    padding: 0 !important;
+}
+
+.pos-modern-screen .pos-modern-totals-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pos-modern-screen .pos-modern-totals-items,
+.pos-modern-screen .pos-modern-totals-subtotal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #526780;
+    font-size: 12px;
+}
+
+.pos-modern-screen .pos-modern-totals-items i {
+    color: #3b73dc;
+}
+
+.pos-modern-screen .pos-modern-totals-items strong,
+.pos-modern-screen .pos-modern-totals-subtotal strong {
+    font-size: 13px;
+    color: #183b69;
+    font-weight: 800;
+}
+
+.pos-modern-screen .pos-modern-totals-subtotal {
+    margin-left: auto;
+}
+
+/* Ajustes desplegables */
+.pos-modern-screen .pos-modern-sale-adjustments {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.pos-modern-screen .pos-modern-adjustments-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 34px;
+    padding: 7px 10px;
+    border: 1px solid #dbe6f7;
+    border-radius: 9px;
+    background: #fff;
+    color: #285da8;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.pos-modern-screen .pos-modern-adjustments-trigger::-webkit-details-marker {
+    display: none;
+}
+
+.pos-modern-screen .pos-modern-adjustments-trigger:hover {
+    background: #edf4ff;
+}
+
+.pos-modern-screen .pos-modern-chevron {
+    font-size: 10px;
+    transition: transform .2s ease;
+}
+
+.pos-modern-screen .pos-modern-sale-adjustments[open]
+.pos-modern-chevron {
+    transform: rotate(180deg);
+}
+
+.pos-modern-screen .pos-modern-adjustments-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    padding-top: 12px;
+}
+
+.pos-modern-screen .pos-modern-adjustment-item {
+    min-width: 0;
+    padding: 11px;
+    background: #fff;
+    border: 1px solid #e0e8f4;
+    border-radius: 9px;
+    font-size: 12px;
+    color: #304766;
+}
+
+.pos-modern-screen .pos-modern-adjustment-item.hide {
+    display: none !important;
+}
+
+.pos-modern-screen .pos-modern-adjustment-label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.pos-modern-screen .pos-modern-adjustment-label strong {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pos-modern-screen .pos-modern-adjustment-label .fa-edit,
+.pos-modern-screen .pos-modern-adjustment-label .fas.fa-edit {
+    color: #2563d7;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pos-modern-screen .pos-modern-adjustment-item > span {
+    font-size: 14px;
+    font-weight: 800;
+    color: #173c71;
+}
+
+.pos-modern-screen .pos-modern-rp-label {
+    font-size: 11px;
+    color: #697f9d;
+    margin-top: 6px;
+}
+
+/* Pantallas estrechas */
+@media (max-width: 767px) {
+    .pos-modern-screen .pos-modern-adjustments-content {
+        grid-template-columns: 1fr;
+    }
+
+    .pos-modern-screen .pos-modern-totals-bar {
+        gap: 8px;
+    }
+}
+
+
+/* ==========================================
+   FASE 7 - RESUMEN COMPACTO
+   COMPATIBILIDAD CON TABLA ORIGINAL DEL POS
+========================================== */
+
+.pos-modern-screen .pos-modern-totals-bar {
+    display: block !important;
+}
+
+.pos-modern-screen .pos-modern-summary-table {
+    width: 100%;
+    margin: 0 0 8px !important;
+    background: transparent !important;
+    border-collapse: collapse;
+}
+
+.pos-modern-screen .pos-modern-summary-table td {
+    width: 50%;
+    padding: 6px 9px !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 12px;
+    color: #526780;
+    vertical-align: middle;
+}
+
+.pos-modern-screen .pos-modern-summary-table td:last-child {
+    text-align: right;
+}
+
+.pos-modern-screen .pos-modern-summary-table b {
+    color: #294668;
+    font-weight: 700;
+}
+
+.pos-modern-screen .pos-modern-summary-table
+.total_quantity,
+.pos-modern-screen .pos-modern-summary-table
+.price_total {
+    font-size: 13px;
+    font-weight: 800;
+    color: #173d72;
+    margin-left: 5px;
+}
+
+.pos-modern-screen .pos-modern-summary-table
+.fa-shopping-basket {
+    color: #3674de;
+    margin-right: 5px;
+}
+
+.pos-modern-screen .pos-modern-sale-adjustments {
+    width: 100%;
+}

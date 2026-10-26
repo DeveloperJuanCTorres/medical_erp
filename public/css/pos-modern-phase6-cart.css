@@ -1,0 +1,177 @@
+
+/* ==========================================
+   POS MODERN PRO - FASE 6
+   CARRITO DERECHO COMPACTO
+   Compatible con Bootstrap 3
+========================================== */
+
+@media (min-width: 992px) {
+
+    /* Contenedor del carrito */
+    .pos-modern-screen .pos-modern-main-column
+    .pos_product_div {
+        padding: 0 4px 4px !important;
+        overflow-x: auto !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: #bdcce1 transparent;
+    }
+
+    /* Tabla compacta */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        border-spacing: 0 7px;
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    /* Encabezados */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table thead th {
+        padding: 11px 5px !important;
+        font-size: 11px !important;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* Filas */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table tbody tr.product_row td {
+        padding: 12px 6px !important;
+        background: #fff !important;
+        border-top: 1px solid #e3eaf5 !important;
+        border-bottom: 1px solid #e3eaf5 !important;
+        vertical-align: middle;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table tbody tr.product_row td:first-child {
+        border-left: 1px solid #e3eaf5 !important;
+        border-radius: 11px 0 0 11px;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table tbody tr.product_row td:last-child {
+        border-right: 1px solid #e3eaf5 !important;
+        border-radius: 0 11px 11px 0;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table tbody tr.product_row:hover td {
+        background: #f8fbff !important;
+    }
+
+    /* Nombre del producto */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .product_row td:first-child {
+        font-size: 12px;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    /* Selector de motor */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .lot_number {
+        width: 100% !important;
+        min-width: 0;
+        margin-top: 7px;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .select2-container {
+        max-width: 100% !important;
+    }
+
+    /* Cantidad */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .input-number {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .input-number .input-group-btn {
+        width: 28px;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .input-number .btn {
+        padding: 7px 5px !important;
+        min-width: 28px;
+        border-radius: 7px !important;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .pos_quantity {
+        min-width: 0;
+        width: 100%;
+        padding: 6px 3px !important;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /* Precio */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .pos_unit_price_inc_tax {
+        width: 100%;
+        min-width: 0;
+        padding: 6px 4px !important;
+        text-align: right;
+        font-size: 12px;
+    }
+
+    /* Subtotal */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .pos_line_total_text {
+        font-weight: 700;
+        font-size: 12px;
+        color: #163d72;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    /* Eliminar */
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .pos_remove_row {
+        font-size: 19px;
+        color: #ed4265 !important;
+        padding: 7px;
+        transition: transform .15s ease;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .pos_remove_row:hover {
+        transform: scale(1.12);
+    }
+
+    /* Mantener resumen fuera del scroll */
+    .pos-modern-screen .pos-modern-main-column
+    .pos_form_totals {
+        margin-top: 12px !important;
+        overflow: visible !important;
+    }
+}
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1366px) {
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table tbody tr.product_row td {
+        padding: 9px 4px !important;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .input-number .input-group-btn {
+        width: 25px;
+    }
+
+    .pos-modern-screen .pos-modern-main-column
+    #pos_table .input-number .btn {
+        min-width: 25px;
+        padding: 6px 3px !important;
+    }
+}

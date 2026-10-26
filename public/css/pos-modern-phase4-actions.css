@@ -1,0 +1,123 @@
+/* POS Modern Pro - Fase 4: barra de acciones. SOLO CSS.
+   Cargar despues de pos-modern-pro.css, phase2 y phase3.
+   No altera carrito, modal, JS ni atributos de los botones. */
+
+/* Contenedor visual existente */
+.pos-modern-actions-wrap .pos-form-actions {
+    background: #ffffff;
+    border: 1px solid #e1e9f5;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(20, 46, 85, .09);
+    padding: 12px 14px;
+}
+
+/* Bootstrap 3: mantener la fila funcional y ordenar sus elementos */
+.pos-modern-actions-wrap .pos-form-actions > .col-md-12 {
+    float: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.pos-modern-actions-wrap .pos-form-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 10px 13px !important;
+    margin: 0 !important;
+    border: 1px solid transparent !important;
+    border-radius: 10px !important;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: filter .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.pos-modern-actions-wrap .pos-form-actions .btn:not(:disabled):hover {
+    filter: brightness(.96);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(20, 46, 85, .12) !important;
+}
+.pos-modern-actions-wrap .pos-form-actions .btn:focus-visible {
+    outline: 3px solid rgba(54, 113, 235, .32);
+    outline-offset: 2px;
+}
+.pos-modern-actions-wrap .pos-form-actions .btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Acciones de cobro destacadas sin cambiar sus eventos */
+.pos-modern-actions-wrap .pos-form-actions #pos-finalize {
+    background: #2355b6 !important;
+    color: #fff !important;
+}
+.pos-modern-actions-wrap .pos-form-actions .pos-express-finalize[data-pay_method="cash"] {
+    background: #15976f !important;
+    color: #fff !important;
+}
+.pos-modern-actions-wrap .pos-form-actions .pos-express-finalize[data-pay_method="card"] {
+    background: #c31b64 !important;
+    color: #fff !important;
+}
+
+/* Total a pagar, sin tocar #total_payable ni el input oculto */
+.pos-modern-actions-wrap .pos-form-actions .pos-total {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 49px;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    background: #102c51 !important;
+    color: #fff !important;
+    border-radius: 11px !important;
+    white-space: nowrap;
+}
+.pos-modern-actions-wrap .pos-form-actions .pos-total .text {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 65px;
+    white-space: normal;
+}
+.pos-modern-actions-wrap .pos-form-actions .pos-total .number {
+    font-size: 22px !important;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+}
+
+/* El boton de recientes permanece al extremo derecho cuando hay espacio */
+.pos-modern-actions-wrap .pos-form-actions #recent-transactions {
+    float: none !important;
+    margin-left: auto !important;
+    background: #2772e7;
+    color: #fff;
+}
+
+/* Respetar clases de ocultamiento que usa el POS */
+.pos-modern-actions-wrap .pos-form-actions .hide { display: none !important; }
+
+/* Laptop: permite salto de linea sin recortar controles */
+@media (min-width: 768px) and (max-width: 1450px) {
+    .pos-modern-actions-wrap .pos-form-actions { padding: 10px 12px; }
+    .pos-modern-actions-wrap .pos-form-actions > .col-md-12 { gap: 6px; }
+    .pos-modern-actions-wrap .pos-form-actions .btn { padding: 9px 10px !important; min-height: 42px; font-size: 11px; }
+    .pos-modern-actions-wrap .pos-form-actions .pos-total .number { font-size: 19px !important; }
+}
+
+/* Movil: volver a un flujo normal para no romper col-xs-6 */
+@media (max-width: 767px) {
+    .pos-modern-actions-wrap .pos-form-actions > .col-md-12 { display: block; }
+    .pos-modern-actions-wrap .pos-form-actions .btn { margin: 3px !important; white-space: normal; }
+    .pos-modern-actions-wrap .pos-form-actions #recent-transactions { margin-left: 3px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pos-modern-actions-wrap .pos-form-actions .btn { transition: none; }
+    .pos-modern-actions-wrap .pos-form-actions .btn:not(:disabled):hover { transform: none; }
+}

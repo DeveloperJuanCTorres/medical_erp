@@ -1,3 +1,6 @@
+<!-- Buscador principal del catálogo -->
+<div id="pos-modern-catalog-search"></div>
+
 <div class="row" id="featured_products_box" style="display: none;">
 @if(!empty($featured_products))
 	@include('sale_pos.partials.featured_products')
