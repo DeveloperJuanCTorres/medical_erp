@@ -429,3 +429,40 @@
         -webkit-overflow-scrolling: touch;
     }
 }
+
+/* ============================================
+   POS MÓVIL - OCULTAR CATEGORÍAS Y MARCAS
+============================================ */
+
+@media (max-width: 767px) {
+
+    /* Ocultar el contenedor completo de categoría */
+    .pos-modern-screen
+    .pos-modern-catalog-column
+    .col-md-4:has(#product_category) {
+        display: none !important;
+    }
+
+    /* Ocultar el contenedor completo de marca */
+    .pos-modern-screen
+    .pos-modern-catalog-column
+    .col-sm-4:has(#product_brand) {
+        display: none !important;
+    }
+
+    /* Buscador ocupa todo el ancho disponible */
+    .pos-modern-screen
+    .pos-modern-product-search-field {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Reducir espacios del panel */
+    .pos-modern-screen
+    .pos-modern-catalog-panel {
+        padding: 10px !important;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+}
